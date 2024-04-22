@@ -13,8 +13,8 @@ chroma_collection = chroma_client.get_or_create_collection(collection_name)
 
 
 # from openai import OpenAI
-# openai_client = openai.api_key = "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"
-client = OpenAI(api_key="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")
+# openai_client = openai.api_key = ""
+client = OpenAI(api_key="")
 
 def get_questions_from_sql():
     # data = []
