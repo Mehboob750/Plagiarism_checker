@@ -147,4 +147,4 @@ def remove_db():
     chroma_client.delete_collection(collection_name)
 
 # remove_db()
-# save_questions()
+save_questions()
