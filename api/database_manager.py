@@ -129,9 +129,9 @@ def get_data(question: str):
     print(question_embedding,'98765q35790')
     results = chroma_collection.query(
         query_embeddings=question_embedding,
-        n_results=5
+        n_results=1
     )
-    print(results["ids"],'0975446789')
+    print(results["ids"],'0975446789', results)
     [print(doc) for doc in results["documents"][0]]
     # print(results["documents"][0][0], "\n\n\n", question, "\n\n\n")
     similarity = cosine_similarity(results["documents"][0][0], question)
