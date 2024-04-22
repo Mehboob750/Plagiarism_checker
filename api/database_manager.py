@@ -5,6 +5,7 @@ from openai import OpenAI
 import openai
 import json
 import numpy as np
+from decouple import config
 
 
 chroma_client = chromadb.HttpClient()
@@ -13,8 +14,9 @@ chroma_collection = chroma_client.get_or_create_collection(collection_name)
 
 
 # from openai import OpenAI
-# openai_client = openai.api_key = ""
-client = OpenAI(api_key="")
+# openai_client = openai.api_key = config('API_KEY')
+client = OpenAI(api_key= config('API_KEY'))
+print(config('API_KEY'),'087543579-')
 
 def get_questions_from_sql():
     # data = []
