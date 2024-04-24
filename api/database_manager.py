@@ -155,5 +155,5 @@ def get_data(question: str):
 def remove_db():
     chroma_client.delete_collection(collection_name)
 
-# remove_db()
-save_questions()
+remove_db()
+# save_questions()
