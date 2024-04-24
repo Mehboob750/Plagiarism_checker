@@ -95,7 +95,12 @@ def save_questions():
                 "publish_date": str(row.publish_date),
                 "test_series_name": row.test_series_name,
                 "test_series_code": row.test_series_code,
-                "course_name": row.course_name
+                "course_name": row.course_name,
+                "option_a": row.option_a,
+                "option_b": row.option_b,
+                "option_c": row.option_c,
+                "option_d": row.option_d,
+                "correct_answer": row.correct_answer
             }
         )
         print(ids,'-0987543457890')
