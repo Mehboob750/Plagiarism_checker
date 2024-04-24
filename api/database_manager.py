@@ -1,3 +1,4 @@
+from api.models import McqTable
 import chromadb
 import uuid
 # from .models import McqTable
@@ -19,62 +20,62 @@ client = OpenAI(api_key= config('API_KEY'))
 print(config('API_KEY'),'087543579-')
 
 def get_questions_from_sql():
-    # data = []
-    # rows = McqTable.objects.all()
-    # # print(rows,'098645790')
-    # for row in rows:
-    #     # print(row,'-0976545780-')
-    #     data.append(row)
-    # return data
-    data = [
-        {
-            "id": '1',
-            "question_text": "Consider the following statements regarding soil types in India: 1. Black soil is ideal for growing cotton and is primarily found in the Deccan plateau. 2. Alluvial soil is the most fertile and covers the majority of northern India. 3. Red soil is typically acidic and not very fertile. How many of the statements above are accurate?",
-            "institute_name": "Vision IAS",
-            "publish_date": "",
-            "test_series_name": "Test Series 2",
-            "test_series_code": "TS002",
-            "course_name": "UPSC"
-        },
-        {
-            "id": '2',
-            "question_text": "Consider the following statements about the Himalayan mountains: 1. The Himalayas form a natural barrier for India against external invasions. 2. They are geologically the oldest mountain range in India. 3. The Himalayas play a crucial role in influencing the climate of India. How many of the statements above are accurate?",
-            "institute_name": "Vision IAS",
-            "publish_date": "",
-            "test_series_name": "Test Series 3",
-            "test_series_code": "TS003",
-            "course_name": "UPSC"
-        },
-        {
-            "id": '3',
-            "question_text": "Consider the following statements about Indian rivers: 1. The Ganges is the longest river in India. 2. Most of the major rivers in India flow towards the east. 3. Rivers in India do not have any significant religious importance. How many of the statements above are accurate?",
-            "institute_name": "Vision IAS",
-            "publish_date": "",
-            "test_series_name": "Test Series 4",
-            "test_series_code": "TS004",
-            "course_name": "UPSC"
-        },
-        {
-            "id": '4',
-            "question_text": "Consider the following statements regarding India's climate: 1. The Thar Desert is the hottest region in India. 2. The northeast monsoon primarily affects the south of India. 3. Coastal areas in India experience a temperate climate. How many of the statements above are accurate?",
-            "institute_name": "Vision IAS",
-            "publish_date": "",
-            "test_series_name": "Test Series 5",
-            "test_series_code": "TS005",
-            "course_name": "UPSC"
-        },
-        {
-            "id": '5',
-            "question_text": "Consider the following statements about the Indian economy: 1. Agriculture is the largest sector of the Indian economy. 2. India is the world's largest producer of milk. 3. The service sector contributes the least to the GDP of India. How many of the statements above are accurate?",
-            "institute_name": "Vision IAS",
-            "publish_date": "",
-            "test_series_name": "Test Series 6",
-            "test_series_code": "TS006",
-            "course_name": "UPSC"
-        }
-    ]
-
+    data = []
+    rows = McqTable.objects.all()
+    # print(rows,'098645790')
+    for row in rows:
+        # print(row,'-0976545780-')
+        data.append(row)
     return data
+    # data = [
+    #     {
+    #         "id": '1',
+    #         "question_text": "Consider the following statements regarding soil types in India: 1. Black soil is ideal for growing cotton and is primarily found in the Deccan plateau. 2. Alluvial soil is the most fertile and covers the majority of northern India. 3. Red soil is typically acidic and not very fertile. How many of the statements above are accurate?",
+    #         "institute_name": "Vision IAS",
+    #         "publish_date": "",
+    #         "test_series_name": "Test Series 2",
+    #         "test_series_code": "TS002",
+    #         "course_name": "UPSC"
+    #     },
+    #     {
+    #         "id": '2',
+    #         "question_text": "Consider the following statements about the Himalayan mountains: 1. The Himalayas form a natural barrier for India against external invasions. 2. They are geologically the oldest mountain range in India. 3. The Himalayas play a crucial role in influencing the climate of India. How many of the statements above are accurate?",
+    #         "institute_name": "Vision IAS",
+    #         "publish_date": "",
+    #         "test_series_name": "Test Series 3",
+    #         "test_series_code": "TS003",
+    #         "course_name": "UPSC"
+    #     },
+    #     {
+    #         "id": '3',
+    #         "question_text": "Consider the following statements about Indian rivers: 1. The Ganges is the longest river in India. 2. Most of the major rivers in India flow towards the east. 3. Rivers in India do not have any significant religious importance. How many of the statements above are accurate?",
+    #         "institute_name": "Vision IAS",
+    #         "publish_date": "",
+    #         "test_series_name": "Test Series 4",
+    #         "test_series_code": "TS004",
+    #         "course_name": "UPSC"
+    #     },
+    #     {
+    #         "id": '4',
+    #         "question_text": "Consider the following statements regarding India's climate: 1. The Thar Desert is the hottest region in India. 2. The northeast monsoon primarily affects the south of India. 3. Coastal areas in India experience a temperate climate. How many of the statements above are accurate?",
+    #         "institute_name": "Vision IAS",
+    #         "publish_date": "",
+    #         "test_series_name": "Test Series 5",
+    #         "test_series_code": "TS005",
+    #         "course_name": "UPSC"
+    #     },
+    #     {
+    #         "id": '5',
+    #         "question_text": "Consider the following statements about the Indian economy: 1. Agriculture is the largest sector of the Indian economy. 2. India is the world's largest producer of milk. 3. The service sector contributes the least to the GDP of India. How many of the statements above are accurate?",
+    #         "institute_name": "Vision IAS",
+    #         "publish_date": "",
+    #         "test_series_name": "Test Series 6",
+    #         "test_series_code": "TS006",
+    #         "course_name": "UPSC"
+    #     }
+    # ]
+
+    # return data
 
 def save_questions():
     rows = get_questions_from_sql()
