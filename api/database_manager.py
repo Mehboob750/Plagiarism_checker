@@ -26,7 +26,7 @@ def get_questions_from_sql():
     for row in rows:
         # print(row,'-0976545780-')
         data.append(row)
-        print(data,'-08653234680=-')
+        # print(data,'-08653234680=-')
     return data
     # data = [
     #     {
@@ -85,6 +85,7 @@ def save_questions():
     ids = []
     metadatas = []
     for row in rows:
+        print(row,'-098754345780-')
         questions.append(row.question_text)
         embeddings.append(get_embedding(row.question_text))
         ids.append(row.id)
