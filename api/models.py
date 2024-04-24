@@ -18,4 +18,4 @@ class McqTable(models.Model):
     class Meta:
         """meta class to store table name and unique constrants"""
 
-        db_table = "mcq_questions_plag"
+        db_table = "mcq_table"
