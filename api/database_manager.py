@@ -92,7 +92,7 @@ def save_questions():
         metadatas.append(
             {
                 "institute_name": row.institute_name,
-                "publish_date": row.publish_date,
+                "publish_date": str(row.publish_date),
                 "test_series_name": row.test_series_name,
                 "test_series_code": row.test_series_code,
                 "course_name": row.course_name
