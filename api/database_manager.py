@@ -88,7 +88,7 @@ def save_questions():
         print(row,'-098754345780-')
         questions.append(row.question_text)
         embeddings.append(get_embedding(row.question_text))
-        ids.append(row.id)
+        ids.append(str(row.id))
         metadatas.append(
             {
                 "institute_name": row.institute_name,
